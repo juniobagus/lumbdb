@@ -8,7 +8,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Welcome />
+          <Welcome text="welcome to props" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
@@ -28,7 +28,8 @@ class App extends Component {
 
 class Welcome extends Component {
   render() {
-    return <h1 className="App-title">Welcome to react</h1>;
+    const { text } = this.props;
+    return <h1 className="App-title">{text}</h1>;
   }
 }
 
